@@ -1,21 +1,27 @@
-import { StyleSheet, Text, View, Image } from "react-native";
+import { StatusBar, StyleSheet, View } from "react-native";
 import React from "react";
-import { Slot, Stack } from "expo-router";
+import { Stack } from "expo-router";
+import MenuHeader from "../../components/MenuHeader";
 
 const TabsLayout = () => {
   return (
     <View style={styles.tabLayout}>
-      <View>
-        <Text>Head</Text>
-      </View>
-      <View style={styles.tabContent}>
-        <Stack>
-          <Stack.Screen name="home" options={{ headerShown: false }} />
-        </Stack>
-      </View>
-      <View style={styles.tabFooter}>
-        <Text>Footer</Text>
-      </View>
+      <Stack
+        screenOptions={{
+          headerTitleStyle: {
+            fontSize: 22,
+          },
+          headerStyle: { backgroundColor: "violet", padding: 0, height: -50 },
+          headerRight: () => <MenuHeader />,
+        }}
+      >
+        <Stack.Screen name="home" options={{ headerTitle: "Home" }} />
+        <Stack.Screen
+          name="chat"
+          options={{ headerShown: true, headerTitle: "Home" }}
+        />
+      </Stack>
+      <StatusBar backgroundColor="violet" />
     </View>
   );
 };
