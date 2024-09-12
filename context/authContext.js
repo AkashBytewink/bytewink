@@ -34,7 +34,9 @@ export const AuthContextProvider = ({ children }) => {
 
     if (docSnap.exists()) {
       let data = docSnap.data();
-      setUser({ ...user, userId: data.userid });
+      setUser((pre) => {
+        return { ...pre, userId: data.userId, username: data?.username };
+      });
     }
   }
 
@@ -60,7 +62,7 @@ export const AuthContextProvider = ({ children }) => {
     }
   };
 
-  const signup = async (email, password) => {
+  const signup = async (email, password, username) => {
     try {
       const response = await createUserWithEmailAndPassword(
         auth,
@@ -71,6 +73,8 @@ export const AuthContextProvider = ({ children }) => {
       await setDoc(doc(db, "users", user?.uid), {
         email,
         userId: user?.uid,
+        photoURL: user?.photoURL,
+        username,
       });
       return { success: true, data: user };
     } catch (e) {

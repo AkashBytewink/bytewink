@@ -51,7 +51,7 @@ const MenuHeader = () => {
           <MenuItem
             title="Profile"
             icon="user"
-            action={() => router.push("/user")}
+            action={() => router.push("/profile")}
           />
           <View
             style={{

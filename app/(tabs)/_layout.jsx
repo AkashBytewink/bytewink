@@ -11,14 +11,23 @@ const TabsLayout = () => {
           headerTitleStyle: {
             fontSize: 22,
           },
-          headerStyle: { backgroundColor: "violet", padding: 0, height: -50 },
-          headerRight: () => <MenuHeader />,
         }}
       >
-        <Stack.Screen name="home" options={{ headerTitle: "Home" }} />
         <Stack.Screen
-          name="chat"
-          options={{ headerShown: true, headerTitle: "Home" }}
+          name="home"
+          options={{
+            headerTitle: "Home",
+            headerStyle: { backgroundColor: "violet" },
+            headerRight: () => <MenuHeader />,
+          }}
+        />
+        <Stack.Screen
+          name="profile"
+          options={{
+            headerTitle: "Profile",
+            headerStyle: { backgroundColor: "violet" },
+            headerRight: () => <MenuHeader />,
+          }}
         />
       </Stack>
       <StatusBar backgroundColor="violet" />

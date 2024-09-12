@@ -10,6 +10,7 @@ import { useAuth } from "../../context/authContext";
 const SignUp = () => {
   const [formData, setFormData] = useState({
     email: "",
+    username: "",
     password: "",
     confirmPassword: "",
   });
@@ -28,7 +29,11 @@ const SignUp = () => {
 
     setIsLoading(true);
 
-    let response = await signup(formData.email, formData.password);
+    let response = await signup(
+      formData.email,
+      formData.password,
+      formData.username
+    );
 
     setIsLoading(false);
 
@@ -47,6 +52,13 @@ const SignUp = () => {
             value={formData.email}
             placeholder="Enter you Email*"
             handleChange={(e) => setFormData({ ...formData, email: e })}
+            otherStyles={{ marginVertical: 5 }}
+          />
+          <InputField
+            title="Username"
+            value={formData.username}
+            placeholder="Enter you Name*"
+            handleChange={(e) => setFormData({ ...formData, username: e })}
             otherStyles={{ marginVertical: 5 }}
           />
           <InputField

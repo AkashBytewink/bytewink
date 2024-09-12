@@ -36,12 +36,12 @@ const MainLayout = () => {
 export default RootLayout = () => {
   return (
     <MenuProvider>
-      <SafeAreaView style={styles.safeArea}>
-        <StatusBar style="auto" backgroundColor="lightgrey" />
-        <AuthContextProvider>
-          <MainLayout />
-        </AuthContextProvider>
-      </SafeAreaView>
+      {/* <SafeAreaView style={styles.safeArea}> */}
+      <StatusBar style="auto" backgroundColor="lightgrey" />
+      <AuthContextProvider>
+        <MainLayout />
+      </AuthContextProvider>
+      {/* </SafeAreaView> */}
     </MenuProvider>
   );
 };

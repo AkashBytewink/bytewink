@@ -4,7 +4,11 @@ import React from "react";
 const Loading = ({ size, color = "black" }) => {
   return (
     <>
-      <ActivityIndicator size={size} color={color} />
+      <ActivityIndicator
+        style={{ flex: 1, backgroundColor: "transparent" }}
+        size={size}
+        color={color}
+      />
     </>
   );
 };
