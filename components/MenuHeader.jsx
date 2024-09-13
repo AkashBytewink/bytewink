@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, View } from "react-native";
 import React from "react";
 import { Menu, MenuOptions, MenuTrigger } from "react-native-popup-menu";
 import { useRouter } from "expo-router";

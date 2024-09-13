@@ -44,7 +44,6 @@ const ChatItem = ({ item, router, currUserId }) => {
   function renderLastMessage() {
     if (typeof lastMessage === "undefined") return "Loading...";
     let msg = lastMessage?.text;
-    console.log(lastMessage);
     if (msg?.includes("\n")) {
       msg = msg.substring(0, msg.indexOf("\n")) + "...";
     }

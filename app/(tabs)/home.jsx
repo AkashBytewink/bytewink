@@ -28,7 +28,7 @@ const Home = () => {
   }
 
   useEffect(() => {
-    if (user?.userId) {
+    if (user?.uid) {
       fetchUsers();
     }
   }, []);

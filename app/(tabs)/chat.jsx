@@ -1,9 +1,7 @@
 import {
   Alert,
   Keyboard,
-  ScrollView,
   StyleSheet,
-  Text,
   TextInput,
   TouchableOpacity,
   View,
@@ -47,7 +45,7 @@ const Chat = () => {
       const docRef = doc(db, "rooms", roomId);
       let msgRef = collection(docRef, "messages");
 
-      const newDoc = await addDoc(msgRef, {
+      await addDoc(msgRef, {
         userId: user?.userId,
         text: message,
         senderName: user?.username,
@@ -98,7 +96,7 @@ const Chat = () => {
 
   function updateScrollView() {
     setTimeout(() => {
-      scrollViewRef?.current?.scrollToEnd({ animted: true });
+      scrollViewRef?.current?.scrollToEnd({ animated: true });
     }, 100);
   }
 
@@ -117,7 +115,11 @@ const Chat = () => {
           />
           <View style={{ flex: 1, justifyContent: "space-between" }}>
             <View style={{ flex: 1 }}>
-              <MessageList scrollViewRef={scrollViewRef} messages={messages} />
+              <MessageList
+                setMessage={setMessage}
+                scrollViewRef={scrollViewRef}
+                messages={messages}
+              />
             </View>
             <View style={styles.inputBottom}>
               <TextInput

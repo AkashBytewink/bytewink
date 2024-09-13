@@ -1,10 +1,10 @@
-import { Pressable, StyleSheet, Text, View } from "react-native";
+import { Pressable, StyleSheet, Text, TouchableOpacity } from "react-native";
 import React from "react";
 import Icon from "react-native-vector-icons/AntDesign";
 
 const MenuItem = ({ title, icon, action }) => {
   return (
-    <Pressable
+    <TouchableOpacity
       style={{
         alignItems: "center",
         flexDirection: "row",
@@ -15,7 +15,7 @@ const MenuItem = ({ title, icon, action }) => {
     >
       <Text style={{ fontSize: 18 }}>{title}</Text>
       <Icon name={icon} size={20}></Icon>
-    </Pressable>
+    </TouchableOpacity>
   );
 };
 

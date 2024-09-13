@@ -2,79 +2,83 @@ import { StyleSheet, Text, View, Image, ScrollView } from "react-native";
 import msd from "../assets/Indian-cricketer-Mahendra-Singh-Dhoni-2011.webp";
 import CustomButton from "../components/CustomButton";
 import { useRouter } from "expo-router";
+import { SafeAreaView } from "react-native-safe-area-context";
 
 export default function App() {
   const router = useRouter();
   return (
-    <ScrollView
-      style={styles.scroll}
-      contentContainerStyle={{
-        margin: 5,
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Text style={styles.head}>Welcome to MS Studio</Text>
-      <Image source={msd} style={styles.authImg} />
-
-      <Text style={styles.para}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias modi
-        vitae adipisci rerum consequatur cum sequi! Nisi voluptatum, vitae
-        dolores aspernatur placeat provident!
-      </Text>
-
-      <CustomButton
-        title="Sign-in"
-        btnColor="#16baff"
-        otherStyle={{ width: "60%", marginVertical: 5 }}
-        handlePress={() => router.replace("/sign-in")}
-      />
-
-      <View
-        style={{
-          flexDirection: "row",
-          gap: 5,
+    <SafeAreaView style={{ flex: 1 }}>
+      <ScrollView
+        style={styles.scroll}
+        contentContainerStyle={{
+          margin: 5,
           alignItems: "center",
-          marginVertical: 5,
+          justifyContent: "center",
         }}
       >
-        <View style={styles.hr}></View>
-        <Text style={{ fontSize: 16 }}>OR</Text>
-        <View style={styles.hr}></View>
-      </View>
+        <Text style={styles.head}>Welcome to MS Studio</Text>
+        <Image source={msd} style={styles.authImg} />
 
-      <View
-        style={{
-          flexDirection: "row",
-          marginVertical: 5,
-          alignItems: "center",
-          gap: 5,
-        }}
-      >
-        <Text style={{ fontSize: 17, fontWeight: "bold" }}>
-          Don't have account?
+        <Text style={styles.para}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias
+          modi vitae adipisci rerum consequatur cum sequi! Nisi voluptatum,
+          vitae dolores aspernatur placeat provident!
         </Text>
-        <CustomButton
-          title="Sign-up"
-          btnColor="green"
-          handlePress={() => router.replace("/sign-up")}
-        />
-      </View>
 
-      <Text style={styles.para}>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore officia
-        accusantium animi amet vel repudiandae incidunt accusamus cumque harum
-        obcaecati, enim hic sequi voluptas quo? Laborum, aliquam? Ducimus,
-        eveniet voluptate! Placeat, consequatur nemo. Eum sit perferendis
-        obcaecati aliquid autem deleniti facere expedita, doloremque impedit
-        harum iste molestiae maiores natus mollitia ullam at nemo repellat
-        quibusdam? Eum quasi nesciunt commodi consectetur officia optio quia
-        culpa rem omnis impedit soluta in quis voluptas maiores autem architecto
-        explicabo, sapiente aperiam fugit mollitia velit est animi laborum ea?
-        Numquam id a cupiditate ipsam quia provident, inventore eos, eveniet
-        saepe praesentium maiores deserunt tempora beatae minima amet.
-      </Text>
-    </ScrollView>
+        <CustomButton
+          title="Sign-in"
+          btnColor="#16baff"
+          otherStyle={{ width: "60%", marginVertical: 5 }}
+          handlePress={() => router.replace("/sign-in")}
+        />
+
+        <View
+          style={{
+            flexDirection: "row",
+            gap: 5,
+            alignItems: "center",
+            marginVertical: 5,
+          }}
+        >
+          <View style={styles.hr}></View>
+          <Text style={{ fontSize: 16 }}>OR</Text>
+          <View style={styles.hr}></View>
+        </View>
+
+        <View
+          style={{
+            flexDirection: "row",
+            marginVertical: 5,
+            alignItems: "center",
+            gap: 5,
+          }}
+        >
+          <Text style={{ fontSize: 17, fontWeight: "bold" }}>
+            Don't have account?
+          </Text>
+          <CustomButton
+            title="Sign-up"
+            btnColor="green"
+            handlePress={() => router.replace("/sign-up")}
+          />
+        </View>
+
+        <Text style={styles.para}>
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore
+          officia accusantium animi amet vel repudiandae incidunt accusamus
+          cumque harum obcaecati, enim hic sequi voluptas quo? Laborum, aliquam?
+          Ducimus, eveniet voluptate! Placeat, consequatur nemo. Eum sit
+          perferendis obcaecati aliquid autem deleniti facere expedita,
+          doloremque impedit harum iste molestiae maiores natus mollitia ullam
+          at nemo repellat quibusdam? Eum quasi nesciunt commodi consectetur
+          officia optio quia culpa rem omnis impedit soluta in quis voluptas
+          maiores autem architecto explicabo, sapiente aperiam fugit mollitia
+          velit est animi laborum ea? Numquam id a cupiditate ipsam quia
+          provident, inventore eos, eveniet saepe praesentium maiores deserunt
+          tempora beatae minima amet.
+        </Text>
+      </ScrollView>
+    </SafeAreaView>
   );
 }
 
