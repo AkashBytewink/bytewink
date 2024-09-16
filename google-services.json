@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "537353372529",
+    "project_id": "bytewink-4ab17",
+    "storage_bucket": "bytewink-4ab17.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:537353372529:android:5176009c612b54cbadacd0",
+        "android_client_info": {
+          "package_name": "com.bytewink.app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "537353372529-hrhsl8imr4l79748hhsddnim7msp1lfp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA06Wm5JRi69aI4Ym2Z0pruGArMEesQ4SE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "537353372529-hrhsl8imr4l79748hhsddnim7msp1lfp.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

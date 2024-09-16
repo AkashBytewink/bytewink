@@ -7,10 +7,21 @@ import {
   APP_ID,
   MEASUREMENT_ID,
 } from "@env";
+
 import { initializeApp } from "firebase/app";
 import { getReactNativePersistence, initializeAuth } from "firebase/auth";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 import { getFirestore, collection } from "firebase/firestore";
+
+console.log(
+  API_KEY,
+  AUTH_DOMAIN,
+  PROJECT_ID,
+  STORAGE_BUCKET,
+  MESSAGING_SENDER_ID,
+  APP_ID,
+  MEASUREMENT_ID
+);
 
 export const firebaseConfig = {
   apiKey: API_KEY,

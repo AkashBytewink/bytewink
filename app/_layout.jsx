@@ -5,8 +5,11 @@ import { SafeAreaView } from "react-native-safe-area-context";
 import { StatusBar } from "expo-status-bar";
 import { AuthContextProvider, useAuth } from "../context/authContext";
 import { MenuProvider } from "react-native-popup-menu";
+import registerNNPushToken from "native-notify";
+import { NOTIFY_APP_ID, NOTIFY_APP_TOKEN } from "@env";
 
 const MainLayout = () => {
+  registerNNPushToken(NOTIFY_APP_ID, NOTIFY_APP_TOKEN);
   const { isAuthenticated } = useAuth();
   const segments = useSegments();
   const router = useRouter();
