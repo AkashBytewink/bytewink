@@ -4,7 +4,7 @@ import React from "react";
 const Hello = ({ size, color = "black" }) => {
   return (
     <>
-      <Text>Hello</Text>
+      <Text>Hello Friends</Text>
     </>
   );
 };
